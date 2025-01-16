@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  ecommerceapp.webapiapp:
+    image: ${DOCKER_REGISTRY-}ecommerceappwebapiapp
+    build:
+      context: .
+      dockerfile: EcommerceApp.WebAPiApp/Dockerfile

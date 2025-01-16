@@ -16,7 +16,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<EcommerceAppDbContext>(options => {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ECommerceNov2024Db"));
+    // options.UseSqlServer(builder.Configuration.GetConnectionString("ECommerceDb"));
+    options.UseSqlServer(Environment.GetEnvironmentVariable("ECommerceDb"));
 
 });
 
